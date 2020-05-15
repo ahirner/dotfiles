@@ -11,6 +11,10 @@ syntax enable
 
 " good tabs
 set smartindent
+set autoindent
 set tabstop=4
 set shiftwidth=4
 set expandtab
+
+" other
+set incsearch

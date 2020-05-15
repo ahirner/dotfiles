@@ -18,3 +18,4 @@ set expandtab
 
 " other
 set incsearch
+hi MatchParen cterm=bold ctermbg=none ctermfg=magenta

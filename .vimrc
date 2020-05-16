@@ -1,15 +1,17 @@
 " turn hybrid line numbers on
-:set number relativenumber
-:set nu rnu
+set number relativenumber
+set nu rnu
 
 " permanent undo
 set undodir=~/.vimdid
 set undofile
+set noswapfile
 
 " good colors
 syntax enable
+hi MatchParen cterm=bold ctermbg=none ctermfg=magenta
 
-" good tabs
+" good indent
 set smartindent
 set autoindent
 set tabstop=4
@@ -18,4 +20,4 @@ set expandtab
 
 " other
 set incsearch
-hi MatchParen cterm=bold ctermbg=none ctermfg=magenta
+set showcmd

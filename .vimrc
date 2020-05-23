@@ -21,3 +21,5 @@ set expandtab
 " other
 set incsearch
 set showcmd
+
+set scrolloff=5

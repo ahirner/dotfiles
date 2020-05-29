@@ -20,3 +20,6 @@ nnoremap <c-i> :action Forward<cr>
 set clipboard+=ideaput
 
 set scrolloff=5
+
+set visualbell
+set noerrorbells

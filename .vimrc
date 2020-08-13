@@ -23,3 +23,8 @@ set incsearch
 set showcmd
 
 set scrolloff=5
+
+" remember last pos in file
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+endif

@@ -49,7 +49,7 @@ window:
   # Values for `decorations` (macOS only):
   #     - transparent: Title bar, transparent background and title bar buttons
   #     - buttonless: Title bar, transparent background, but no title bar buttons
-  decorations: buttonless
+  decorations: none
 
   # Startup Mode (changes require restart)
   #
@@ -199,6 +199,8 @@ colors:
     cyan:    '#dfdffe'
     white:   '#ffffff'
 
+  vi_mode_cursor:
+    cursor: '#fa1010'
 
 # Visual Bell
 #
@@ -249,6 +251,7 @@ cursor:
   #   - _ Underline
   #   - | Beam
   #style: Block
+  vi_mode_style: Beam
 
   # If this is `true`, the cursor will be rendered as a hollow box when the
   # window is not focused.
@@ -480,12 +483,10 @@ key_bindings:
   #- { key: Q,      mods: Command,         action: Quit             }
   #- { key: W,      mods: Command,         action: Quit             }
   #- { key: F,      mods: Command|Control, action: ToggleFullscreen }
-  
+ 
   # scrolling through words
   - { key: Left,     mods: Command,       chars: "\x1bb" }
   - { key: Right,    mods: Command,       chars: "\x1bf" }
-  # new window
-  - { key: N, mods: Command,              action: SpawnNewInstance  }  
   # tmux panes
   # next
   - { key: Tab,      mods: Control,       chars: "\x02\x6e" }
@@ -504,6 +505,10 @@ key_bindings:
   #- { key: PageDown,  mods: Shift,   action: ScrollPageDown, mode: ~Alt       }
   #- { key: Home,      mods: Shift,   action: ScrollToTop,    mode: ~Alt       }
   #- { key: End,       mods: Shift,   action: ScrollToBottom, mode: ~Alt       }
+
+  # Vi Mode
+  - { key: Space,  mods: Control, mode: Vi, action: ScrollToBottom          }
+  - { key: Space,  mods: Control,           action: ToggleViMode            }
 
 #debug:
   # Display the time it takes to redraw each frame.

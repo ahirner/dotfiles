@@ -18,6 +18,9 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
+" preserve dos CRLF endings
+set ffs=unix,dos
+
 " other
 set incsearch
 set showcmd

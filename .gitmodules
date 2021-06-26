@@ -2,5 +2,5 @@
 	path = .vim/pack/vendor/start/vim-bracketed-paste
 	url = https://github.com/ConradIrwin/vim-bracketed-paste.git
 [submodule "tmux-resurrect"]
-	path = .vim/pack/vendor/start/tmux-resurrect
+	path = .tmux/tmux-resurrect
 	url = https://github.com/tmux-plugins/tmux-resurrect

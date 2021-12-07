@@ -1,0 +1,28 @@
+# shorten a path in $1 to max of $2 characters, prepending a "..."
+function __shortpath {
+    if [[ ${#1} -gt $2 ]]; then
+        len=$2+3
+        echo "..."${1: -$len}
+    else
+        echo $1
+    fi
+}
+export PS1='\[\e[38;5;1m\]\u\[\e[38;5;245m\]@\[\e[38;5;38m\]\h:\[\e[38;5;8m\]$(__shortpath "\w" 30) $\[$(tput sgr0)\] '
+export CLICOLOR=1
+export LSCOLORS=ExFxBxDxCxegedabagacad
+
+alias ll='ls -lGFh'
+
+alias s='git status'
+alias c='git diff --cached'
+alias a='git add'
+alias d='git diff'
+alias p='git pull'
+alias co='git checkout'
+__git_complete co _git_checkout
+
+alias v='vim'
+
+#[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
+complete -F __start_kubectl kc
+

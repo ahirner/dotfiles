@@ -7,9 +7,12 @@ function __shortpath {
         echo $1
     fi
 }
-export PS1='\[\e[38;5;1m\]\u\[\e[38;5;245m\]@\[\e[38;5;38m\]\h:\[\e[38;5;8m\]$(__shortpath "\w" 30) $\[$(tput sgr0)\] '
-export CLICOLOR=1
-export LSCOLORS=ExFxBxDxCxegedabagacad
+PS1='\[\e[38;5;1m\]\u\[\e[38;5;245m\]@\[\e[38;5;38m\]\h:\[\e[38;5;8m\]$(__shortpath "\w" 30) $\[$(tput sgr0)\] '
+CLICOLOR=1
+LSCOLORS=ExFxBxDxCxegedabagacad
+
+# masquarad TERM to enable color for most programs
+export TERM=xterm-256color
 
 alias ll='ls -lGFh'
 
@@ -26,3 +29,18 @@ alias v='vim'
 #[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 complete -F __start_kubectl kc
 
+# history
+HISTCONTROL=ignoredups:erasedups
+shopt -s histappend
+
+# prompt and title
+trap 'echo -ne "\033]0;$BASH_COMMAND\007"' DEBUG
+function show_name(){
+    if [[ -n "$BASH_COMMAND" ]]; then
+      echo -en "\033]0;`basename ${PWD}`\007";
+    else
+      echo -en "\033]0;$BASH_COMMAND\007";
+    fi
+}
+
+PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}show_name"

@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+# script target: cd to dirname
+if [[ -f "$1" ]]; then
+  TITLE="\033]0;$1\007"
+  cd $(dirname $1)
+  CMD="./$(basename $1) ${@:2}"
+# folder target
+elif [[ -d "$1" ]]; then
+  CMD="cd $1"
+# command target
+else
+  CMD=$1
+  TITLE="\033]0;$CMD\007"
+fi
+
+if [[ -n $TITLE ]]; then
+  echo -ne $TITLE
+fi
+
+$CMD ${@:2}
+
+# history -s simply wouldn't work..
+echo "$CMD ${@:2}" >> ~/.bash_history
+history -r
+# become shell with history
+exec $SHELL

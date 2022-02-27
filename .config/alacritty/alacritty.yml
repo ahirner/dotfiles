@@ -483,20 +483,24 @@ key_bindings:
   #- { key: Q,      mods: Command,         action: Quit             }
   #- { key: W,      mods: Command,         action: Quit             }
   #- { key: F,      mods: Command|Control, action: ToggleFullscreen }
- 
+
   # scrolling through words
   - { key: Left,     mods: Command,       chars: "\x1bb" }
   - { key: Right,    mods: Command,       chars: "\x1bf" }
-  # tmux panes
+  # tmux/zellij tabs
   # next
   - { key: Tab,      mods: Control,       chars: "\x02\x6e" }
   # prev
   - { key: Tab,      mods: Control|Shift, chars: "\x02\x70" }
-  # new 
+  # new
   - { key: T,        mods: Command,       chars: "\x02\x63" }
   # close
   - { key: W,        mods: Command,       chars: "\x02\x78" }
-  
+  # zellij panes
+  - { key: H,        mods: Alt,           chars: "\x1b]" }
+  - { key: J,        mods: Alt,           chars: "\x1b[" }
+
+
   #- { key: Paste,                    action: Paste                            }
   #- { key: Copy,                     action: Copy                             }
   #- { key: L,         mods: Control, action: ClearLogNotice                   }

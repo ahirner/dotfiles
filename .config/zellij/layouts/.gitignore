@@ -1,0 +1,5 @@
+# some `zexec` workspaces until:
+# https://github.com/zellij-org/zellij/issues/1118
+# https://github.com/zellij-org/zellij/issues/707
+# https://github.com/zellij-org/zellij/issues/1133 (-> resurrect plugin)
+*.yaml

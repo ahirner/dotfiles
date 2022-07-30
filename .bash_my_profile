@@ -24,6 +24,9 @@ alias p='git pull'
 alias co='git checkout'
 __git_complete co _git_checkout
 
+# https://stackoverflow.com/a/54230069
+GIT_COMPLETION_CHECKOUT_NO_GUESS=1
+
 alias v='vim'
 
 #[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
@@ -34,7 +37,6 @@ HISTCONTROL=ignoredups:erasedups
 shopt -s histappend
 
 # prompt and title
-trap 'echo -ne "\033]0;$BASH_COMMAND\007"' DEBUG
 function show_name(){
     if [[ -n "$BASH_COMMAND" ]]; then
       echo -en "\033]0;`basename ${PWD}`\007";

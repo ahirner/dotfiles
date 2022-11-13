@@ -25,9 +25,12 @@ set ffs=unix,dos
 set incsearch
 set showcmd
 
-set scrolloff=5
+set scrolloff=10
 
 " remember last pos in file
 if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 endif
+
+" go to last buffer like helix
+nnoremap ga :b# <CR>

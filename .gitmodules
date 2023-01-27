@@ -1,6 +1,4 @@
 [submodule ".vim/pack/vendor/start/vim-bracketed-paste"]
 	path = .vim/pack/vendor/start/vim-bracketed-paste
 	url = https://github.com/ConradIrwin/vim-bracketed-paste.git
-[submodule ".config/helix"]
-	path = .config/helix
-	url = https://github.com/ahirner/helix-vim
+

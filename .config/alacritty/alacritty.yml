@@ -19,7 +19,7 @@ window:
   # If both are `0`, this setting is ignored.
   dimensions:
     columns: 160
-    lines: 50
+    lines: 350
 
   # Window position (changes require restart)
   #
@@ -289,9 +289,6 @@ shell:
 # Setting this option to `true` makes Alacritty use the legacy WinPTY backend,
 # even if the ConPTY backend is available.
 #winpty_backend: false
-
-# Send ESC (\x1b) before characters when alt is pressed.
-alt_send_esc: false
 
 #mouse:
   # Click settings

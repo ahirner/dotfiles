@@ -270,9 +270,13 @@ live_config_reload: true
 #   - (Linux/BSD) user login shell
 #   - (Windows) powershell
 shell:
-#  program: /bin/bash
-#  args:
-#    - --login
+  # nixos (darwin) system bash
+  program: /run/current-system/sw/bin/bash
+  args:
+    # login such that zellij execs with user profile
+    - --login
+    - -c
+    - zellij
 
 # Startup directory
 #

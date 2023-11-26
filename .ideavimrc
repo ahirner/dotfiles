@@ -23,3 +23,8 @@ set scrolloff=5
 
 set visualbell
 set noerrorbells
+
+# helixify
+let mapleader = " "
+map <leader>r <Action>(RenameElement)
+nmap gr :action GotoImplementation<CR>

@@ -1,0 +1,112 @@
+dynamic_title = true
+live_config_reload = true
+
+[colors]
+draw_bold_text_with_bright_colors = false
+
+[colors.bright]
+black = "#7c7c7c"
+blue = "#b5dcfe"
+cyan = "#dfdffe"
+green = "#9ec400"
+magenta = "#ff9cfe"
+red = "#ffb6b0"
+white = "#ffffff"
+yellow = "#ffffcb"
+
+[colors.normal]
+black = "#4e4e4e"
+blue = "#96cbfe"
+cyan = "#c6c5fe"
+green = "#73d216"
+magenta = "#ff73fd"
+red = "#ff6c60"
+white = "#eeeeee"
+yellow = "#ffffb6"
+
+[colors.primary]
+background = "#000000"
+foreground = "#ffffff"
+
+[colors.vi_mode_cursor]
+cursor = "#fa1010"
+
+[cursor]
+unfocused_hollow = true
+vi_mode_style = "Beam"
+
+[font]
+size = 12.0
+
+[[keyboard.bindings]]
+chars = "\u001Bb"
+key = "Left"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u001Bf"
+key = "Right"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0002n"
+key = "Tab"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\u0002p"
+key = "Tab"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+chars = "\u0002c"
+key = "T"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u001Bp"
+key = "Up"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u001Bn"
+key = "Down"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u001Bs"
+key = "S"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u001Bw"
+key = "W"
+mods = "Command"
+
+[[keyboard.bindings]]
+action = "ScrollToBottom"
+key = "Space"
+mode = "Vi"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "ToggleViMode"
+key = "Space"
+mods = "Control"
+
+[scrolling]
+history = 50000
+
+[shell]
+args = ["--login", "-c", "zellij"]
+program = "/run/current-system/sw/bin/bash"
+
+[visual_bell]
+duration = 0
+
+[window]
+decorations = "buttonless"
+
+[window.dimensions]
+columns = 160
+lines = 350

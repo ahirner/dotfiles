@@ -49,17 +49,20 @@ key = "Right"
 mods = "Command"
 
 [[keyboard.bindings]]
-chars = "\u0002n"
+# zellij next pane (Alt+l)
+chars = "\u001Bl"
 key = "Tab"
 mods = "Control"
 
 [[keyboard.bindings]]
-chars = "\u0002p"
+# zellij prev pane (Alt+h)
+chars = "\u001Bh"
 key = "Tab"
 mods = "Control|Shift"
 
 [[keyboard.bindings]]
-chars = "\u0002c"
+# zellij tmux mode
+chars = "\u0002"
 key = "T"
 mods = "Command"
 

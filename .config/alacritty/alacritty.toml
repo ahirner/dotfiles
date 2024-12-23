@@ -1,4 +1,4 @@
-dynamic_title = true
+[general]
 live_config_reload = true
 
 [colors]
@@ -97,15 +97,16 @@ mods = "Control"
 [scrolling]
 history = 50000
 
-[shell]
+[terminal.shell]
 args = ["--login", "-c", "zellij"]
 program = "/run/current-system/sw/bin/bash"
 
-[visual_bell]
+[bell]
 duration = 0
 
 [window]
 decorations = "buttonless"
+dynamic_title = true
 
 [window.dimensions]
 columns = 160
